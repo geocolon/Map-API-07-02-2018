@@ -1,12 +1,14 @@
 [
     {
         "username":"geocolon",
+        "email": "geo@gmail.com",
         "firstname": "George",
         "lastname": "Colon",
         "password": "abcdef1234"
     },
     {
         "username":"AxeMan",
+        "email":"axeman@gmail.com",
         "firstname": "Alex",
         "lastname": "Cumbo",
         "password": "abcdef1234"
