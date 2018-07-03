@@ -1,6 +1,8 @@
 import React from 'react';
 import {withRouter, Route} from 'react-router-dom';
-import MapComponent from './smartComponent/MapComponent';
+import { connect } from 'react-redux';
+import { refreshAuthToken } from '../actions/auth';
+import MapComponent from './MapComponent';
 
 
 export class App extends React.Component {
