@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Nav from '../components/Nav';
-import RegistrationForm from './Registration-Form';
+import Nav from './Nav';
+import RegistrationForm from './RegistrationForm';
 import {Link, Redirect} from 'react-router-dom';
 
 class RegistrationPage extends React.Component {

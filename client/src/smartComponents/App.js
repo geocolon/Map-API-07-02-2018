@@ -2,8 +2,10 @@ import React from 'react';
 import {withRouter, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { refreshAuthToken } from '../actions/auth';
-import MapComponent from './MapComponent';
-
+import MapComponent from './map-page';
+import RegistrationPage from './registration-page';
+import Logout from './Logout';
+import Login from './login-page';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -38,7 +40,10 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <Route exact path="/" component={MapComponent} />
+                <Route exact path="/signup" component={RegistrationPage} />
+                <Route exact path="/logout" component={Logout} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/mapdashboard" component={MapComponent} />
             </div>
         )
     }

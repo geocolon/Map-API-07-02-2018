@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Nav from '../components/Nav';
+import Nav from './Nav';
 import Login from './Login';
 import {Link, Redirect} from 'react-router-dom';
 

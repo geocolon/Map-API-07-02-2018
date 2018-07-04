@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
+import Logout from '../smartComponents/Logout';
+
+
 // import Logout from '../containers/Logout';
 import './Nav.css';
 
@@ -16,7 +19,7 @@ class Nav extends React.Component {
                 <button className="hamburger">
                 </button>
                 <ul className="topnav">
-                    {/* <li><Logout /></li> */}
+                    <li><Logout /></li>
                     {!this.props.loggedIn && <li className="login-status"><Link to="/signup">Sign Up</Link></li> }
                     {!this.props.loggedIn && <li className="login-status"><Link to="/login">Login</Link></li> }
                     <li><Link to="/about">About</Link></li>
