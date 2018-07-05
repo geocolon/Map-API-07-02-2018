@@ -6,12 +6,12 @@ import {Link, Redirect} from 'react-router-dom';
 
 class RegistrationPage extends React.Component {
     // If we are logged in (which happens automatically when registration
-    // is successful) redirect to the user's dashboard
+    // is successful) redirect to the user's mapdashboard
     render(){
         // console.log('Checking props',this.props)
         if (this.props.loggedIn) {
             console.log('Is this working?')
-            return <Redirect to="/dashboard" />;
+            return <Redirect to="/mapdashboard" />;
         }
 
         return (

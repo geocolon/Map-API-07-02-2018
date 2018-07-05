@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
         // console.log('Checking props',this.props)
         if (this.props.loggedIn) {
             console.log('Is Login Redirect working? Yes')
-            return <Redirect to="/dashboard" />;
+            return <Redirect to="/mapdashboard" />;
         }
 
         return (

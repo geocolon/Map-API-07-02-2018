@@ -11,8 +11,8 @@ const matchesPassword = matches('password');
 class RegistrationForm extends React.Component {
     onSubmit(values) {
         console.log('This is the values',values)
-        const {username, password, firstname, lastname} = values;
-        const user = {username, password, firstname, lastname};
+        const {username, email, password, firstname, lastname} = values;
+        const user = {username, email, password, firstname, lastname};
         return this.props
             .dispatch(registerUser(user))
             .then(() => this.props.dispatch(login(username, password)));
@@ -30,27 +30,16 @@ class RegistrationForm extends React.Component {
                 <Field component="input" type="text" name="firstname" />
                 <label htmlFor="lastname">Last name</label>
                 <Field component={Input} type="text" name="lastname" />
+
+                <label htmlFor="email">Email</label>
+                <Field component={Input} type="text" name="email" />
+
                 <label htmlFor="username">Username</label>
-                <Field
-                    component={Input}
-                    type="text"
-                    name="username"
-                    validate={[required, nonEmpty, isTrimmed]}
-                />
+                <Field component={Input} type="text" name="username" validate={[required, nonEmpty, isTrimmed]} />
                 <label htmlFor="password">Password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="password"
-                    validate={[required, passwordLength, isTrimmed]}
-                />
+                <Field component={Input} type="password" name="password" validate={[required, passwordLength, isTrimmed]} />
                 <label htmlFor="passwordConfirm">Confirm password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="passwordConfirm"
-                    validate={[required, nonEmpty, matchesPassword]}
-                />
+                <Field component={Input} type="password" name="passwordConfirm" validate={[required, nonEmpty, matchesPassword]} />
                 <button
                     type="submit"
                     >
@@ -61,7 +50,6 @@ class RegistrationForm extends React.Component {
         );
     }
 }
-
 export default reduxForm({
     form: 'registration',
     onSubmitFail: (errors, dispatch) =>
