@@ -10,6 +10,7 @@ const jwt = require('jsonwebtoken');
 const usersRouter = require('./routes/users');
 const notesRouter = require('./routes/notes');
 const authRouter = require('./routes/auth');
+const sweapDataRouter = require('./routes/sweapData');
 const {localStrategy, jwtStrategy } = require('./passport/local');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
@@ -25,6 +26,7 @@ passport.use(jwtStrategy);
 app.use(express.static('public'));
 app.use('/api/', usersRouter); 
 app.use('/api/notes', notesRouter); 
+app.use('/api/citydata', sweapDataRouter); 
 // app.use('/api/recipes', recipesRouter); 
 app.use('/api/auth/', authRouter);
 

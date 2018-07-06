@@ -23,6 +23,7 @@ class Nav extends React.Component {
                     {!this.props.loggedIn && <li className="login-status"><Link to="/signup">Sign Up</Link></li> }
                     {!this.props.loggedIn && <li className="login-status"><Link to="/login">Login</Link></li> }
                     <li><Link to="/about">About</Link></li>
+                    {this.props.loggedIn && <li className="login-status"><Link to="/mapdashboard">Map Dashboard</Link></li>}
                     <li><Link to="/">Home</Link></li>
                 </ul>
                 

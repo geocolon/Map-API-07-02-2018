@@ -1,6 +1,9 @@
 import React from "react"
 import { compose, withProps } from "recompose"
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+
+const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
+
 const MyMapComponent = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
@@ -14,6 +17,8 @@ const MyMapComponent = compose(
     defaultZoom={8}
     defaultCenter={{ lat: 34.205702, lng: -118.461882 }}
   >
+  
+
     {props.isMarkerShown && <Marker position={{ lat: 34.205702, lng: -118.461882 }} onClick={props.onMarkerClick} />}
   </GoogleMap>
 )

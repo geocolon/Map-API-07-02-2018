@@ -3,6 +3,7 @@ import {withRouter, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { refreshAuthToken } from '../actions/auth';
 import MapComponent from './map-page';
+import Home from '../components/Home';
 import RegistrationPage from './registration-page';
 import Logout from './Logout';
 import Login from './login-page';
@@ -40,6 +41,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app">
+                <Route exact path="/" component={Home} />
                 <Route exact path="/signup" component={RegistrationPage} />
                 <Route exact path="/logout" component={Logout} />
                 <Route exact path="/login" component={Login} />
