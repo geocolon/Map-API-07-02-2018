@@ -3,14 +3,13 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const passport = require('passport');
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 
 const usersRouter = require('./routes/users');
 const notesRouter = require('./routes/notes');
 const authRouter = require('./routes/auth');
-const sweapDataRouter = require('./routes/sweapData');
 const {localStrategy, jwtStrategy } = require('./passport/local');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
@@ -26,8 +25,6 @@ passport.use(jwtStrategy);
 app.use(express.static('public'));
 app.use('/api/', usersRouter); 
 app.use('/api/notes', notesRouter); 
-app.use('/api/citydata', sweapDataRouter); 
-// app.use('/api/recipes', recipesRouter); 
 app.use('/api/auth/', authRouter);
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
@@ -40,7 +37,7 @@ app.get('/api/protected', jwtAuth, (req, res) => {
 
 
 // app.post('/refresh', jwtAuth, (req, res) => {
-//   const authToken = createAuthToken(req.user);
+//   const authToken = authRouter.createAuthToken(req.user);
 //   res.json({authToken});
 // });
 

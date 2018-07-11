@@ -2,7 +2,6 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
-const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 
 const MyMapComponent = compose(
   withProps({
