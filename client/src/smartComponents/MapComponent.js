@@ -1,52 +1,32 @@
 import React from "react"
-import { compose, withProps } from "recompose"
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import './MapComponent.css';
+import openSocket from 'socket.io-client';
+
+const socket = openSocket('http://localhost:8080');
 
 
-const MyMapComponent = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-  }),
-  withGoogleMap
-)((props) =>
-  <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: 34.205702, lng: -118.461882 }}
-  >
-  
 
-    {props.isMarkerShown && <Marker position={{ lat: 34.205702, lng: -118.461882 }} onClick={props.onMarkerClick} />}
-  </GoogleMap>
-)
-
-class MyFancyComponent extends React.PureComponent {
-  state = {
-    isMarkerShown: false,
-  }
-
-  componentDidMount() {
-    this.delayedShowMarker()
-  }
-
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
-  }
+class SocketMessage extends React.Component {
+    componentDidMount() {
+      window.chatEmit();
+    }
 
   render() {
     return (
-        <MyMapComponent isMarkerShown={this.state.isMarkerShown} onMarkerClick={this.handleMarkerClick}/>
+      <div>
+      <div id="mario-chat">
+        <div id="chat-window">
+          <div id="output"></div>
+          <div id="feedback"></div>
+        </div>
+        <input id="handle" type="text" placeholder="Handle"/>
+        <input id="message" type="text" placeholder="Message"/>
+        <button id="send">Send</button>
+      </div>
+
+      </div>
     )
   }
 }
 
-export default MyFancyComponent
+export default SocketMessage;
