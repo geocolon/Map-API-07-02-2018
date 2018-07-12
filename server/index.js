@@ -3,24 +3,23 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-// const mongoose = require('mongoose');
 const passport = require('passport');
-// const jwt = require('jsonwebtoken');
-
 const usersRouter = require('./routes/users');
 const notesRouter = require('./routes/notes');
 const authRouter = require('./routes/auth');
 const {localStrategy, jwtStrategy } = require('./passport/local');
-
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
-// const {dbConnect} = require('./db-knex');
+const socket = require('socket.io');
+
+
 const app = express();
-// Mount routers
+
 app.use( cors({ origin: CLIENT_ORIGIN }) );
-// app.options('*', cors());
 passport.use(localStrategy);
 passport.use(jwtStrategy);
+
+// Mount routers
 
 app.use(express.static('public'));
 app.use('/api/', usersRouter); 
@@ -36,10 +35,10 @@ app.get('/api/protected', jwtAuth, (req, res) => {
 });
 
 
-// app.post('/refresh', jwtAuth, (req, res) => {
-//   const authToken = authRouter.createAuthToken(req.user);
-//   res.json({authToken});
-// });
+app.post('/refresh', jwtAuth, (req, res) => {
+  const authToken = authRouter.createAuthToken(req.user);
+  res.json({authToken});
+});
 
 app.use(
   morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
@@ -69,7 +68,26 @@ function runServer(port = PORT) {
       console.error('Express failed to start');
       console.error(err);
     });
+
+  const io = socket(server);
+  io.on('connection', (socket) => {
+
+    console.log('made socket connection', socket.id);
+
+    // Handle chat event
+    socket.on('chat', function(data){
+      // console.log(data);
+      io.sockets.emit('chat', data);
+    });
+
+    // Handle typing event
+    socket.on('typing', function(data){
+      socket.broadcast.emit('typing', data);
+    });
+
+  });
 }
+
 
 if (require.main === module) {
   dbConnect();
