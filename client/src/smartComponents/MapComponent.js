@@ -11,7 +11,7 @@ class SocketMessage extends React.Component {
     console.log('looking for username',this.props.loggedIn);
     return (
       <div>
-      <div className="mario-chat">
+      <div className="main-messenger">
         <div id="chat-window">
           <div id="output"></div>
           <div id="feedback"></div>

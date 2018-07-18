@@ -15,13 +15,13 @@ export class Logout extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <a onClick={() => this.logOut()}>Log out</a>
+                <a id="logout" onClick={() => this.logOut()}>Log out</a>
             );
         }
         return (
-            <div>
+            <span>
                 {logOutButton}
-            </div>
+            </span>
         );
     }
 }
