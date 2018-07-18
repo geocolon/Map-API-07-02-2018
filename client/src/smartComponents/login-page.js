@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Nav from './Nav';
+import Footer from '../components/Footer';
 import Login from './Login';
 import {Link, Redirect} from 'react-router-dom';
 
@@ -20,6 +21,7 @@ class LoginPage extends React.Component {
                     <center><h2> Login for App {this.props.loggedIn}</h2></center>
                 <Login /><br/>
                 <center><Link to="/signup">Not registered? Sign up</Link></center>
+                <Footer /> 
             </div>    
         );
     } 

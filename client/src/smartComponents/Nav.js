@@ -13,10 +13,22 @@ class Nav extends React.Component {
             // document.getElementsByClassName("login-status").style.display="none";
         }
         return( 
-            <div>
+            <div className="header">
                 <div className="mobile-nav-space"></div>
                 <nav>
-                <button className="hamburger">
+
+                <a href="#default" className="logo"><Link to="/">CompanyLogo</Link></a>
+                <div className="header-right">
+                    <a href="#home"><Link to="/">Home</Link></a>
+                    {/* <a href="#about"><Link to="/about">About</Link></a> */}
+                    {this.props.loggedIn && <a className="login-status"><Link to="/mapdashboard">Dashboard</Link></a>}
+                    {!this.props.loggedIn && <a className="login-status"><Link to="/login">Login</Link></a> }
+                    {!this.props.loggedIn && <a className="login-status"><Link to="/signup">Sign Up</Link></a> }
+                    <a><Logout /></a>
+                </div>
+
+
+                {/* <button className="hamburger">
                 </button>
                 <ul className="topnav">
                     <li><Logout /></li>
@@ -25,7 +37,7 @@ class Nav extends React.Component {
                     <li><Link to="/about">About</Link></li>
                     {this.props.loggedIn && <li className="login-status"><Link to="/mapdashboard">Map Dashboard</Link></li>}
                     <li><Link to="/">Home</Link></li>
-                </ul>
+                </ul> */}
                 
                 </nav>
             </div>
