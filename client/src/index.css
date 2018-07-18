@@ -58,7 +58,19 @@ label{
   padding: 10px 20px;
   color: #555;
 }
-
+textarea {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: #eee;
+  border: 0;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+  font-family: Nunito;
+  font-size: 16px;
+}
 input{
   padding: 10px 20px;
   box-sizing: border-box;
@@ -112,6 +124,10 @@ button{
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media (min-width: 600px) {
+  .container { width: 100%; padding: 0px 10px;}
 }
 
 

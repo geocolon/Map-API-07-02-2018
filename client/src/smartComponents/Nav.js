@@ -17,13 +17,13 @@ class Nav extends React.Component {
                 <div className="mobile-nav-space"></div>
                 <nav>
 
-                <a href="#default" className="logo"><Link to="/">CompanyLogo</Link></a>
+                <Link className="logo" to="/">CompanyLogo</Link>
                 <div className="header-right">
-                    <a href="#home"><Link to="/">Home</Link></a>
+                    <Link className="login-status" to="/">Home</Link>
                     {/* <a href="#about"><Link to="/about">About</Link></a> */}
-                    {this.props.loggedIn && <a className="login-status"><Link to="/mapdashboard">Dashboard</Link></a>}
-                    {!this.props.loggedIn && <a className="login-status"><Link to="/login">Login</Link></a> }
-                    {!this.props.loggedIn && <a className="login-status"><Link to="/signup">Sign Up</Link></a> }
+                    {this.props.loggedIn && <Link className="login-status" to="/mapdashboard">Dashboard</Link> }
+                    {!this.props.loggedIn && <Link className="login-status" to="/login">Login</Link> }
+                    {!this.props.loggedIn && <Link className="login-status" to="/signup">Sign Up</Link> }
                     <a><Logout /></a>
                 </div>
 

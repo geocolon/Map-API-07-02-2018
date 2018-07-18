@@ -16,7 +16,7 @@ class SocketMessage extends React.Component {
           <div id="feedback"></div>
         </div>
         <input id="handle" type="text" placeholder="Handle"/>
-        <input id="message" type="text" placeholder="Message"/>
+        <textarea id="message" type="textarea" placeholder="Message"/>
         <button id="send">Send</button>
       </div>
 
@@ -26,7 +26,7 @@ class SocketMessage extends React.Component {
 }
 
 const mapStateToProps = state => {
-  // console.log('This is the state on Reg page',state)
+  console.log('This is the state on Reg page',state)
   return {
  loggedIn: state.auth.currentUser
   }

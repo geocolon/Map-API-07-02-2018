@@ -35,7 +35,7 @@ class RegistrationPage extends React.Component {
 const mapStateToProps = state => {
     // console.log('This is the state on Reg page',state)
     return {
-   loggedIn: state.auth.currentUser !== null
+        loggedIn: state.auth.currentUser !== null
     }
 };
 

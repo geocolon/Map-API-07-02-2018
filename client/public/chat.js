@@ -1,8 +1,8 @@
 'use strict';
 /* global io */
 // Make connection
-const socket = io.connect('http://localhost:8080');
 
+const socket = io.connect('http://localhost:8080');
 // Query DOM
 window.chatEmit = function(){
   var message = document.getElementById('message'),
@@ -35,4 +35,7 @@ window.chatEmit = function(){
   socket.on('typing', function(data){
     feedback.innerHTML = '<p><em>' + data + ' is typing a message...</em></p>';
   });
-}
+};
+
+
+
