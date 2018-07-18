@@ -21,10 +21,10 @@ class Nav extends React.Component {
                 <div className="header-right">
                     <Link className="login-status" to="/">Home</Link>
                     {/* <a href="#about"><Link to="/about">About</Link></a> */}
-                    {this.props.loggedIn && <Link className="login-status" to="/mapdashboard">Dashboard</Link> }
-                    {!this.props.loggedIn && <Link className="login-status" to="/login">Login</Link> }
-                    {!this.props.loggedIn && <Link className="login-status" to="/signup">Sign Up</Link> }
-                    <a><Logout /></a>
+                    {this.props.loggedIn && <Link to="/mapdashboard">Dashboard</Link> }
+                    {!this.props.loggedIn && <Link to="/login">Login</Link> }
+                    {!this.props.loggedIn && <Link to="/signup">Sign Up</Link> }
+                    <Logout />
                 </div>
 
 

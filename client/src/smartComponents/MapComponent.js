@@ -8,6 +8,7 @@ class SocketMessage extends React.Component {
     }
 
   render() {
+    console.log('looking for username',this.props.loggedIn);
     return (
       <div>
       <div className="mario-chat">
@@ -15,7 +16,7 @@ class SocketMessage extends React.Component {
           <div id="output"></div>
           <div id="feedback"></div>
         </div>
-        <input id="handle" type="text" placeholder="Handle"/>
+        <p id="handle" value={this.props.loggedIn.username}>You are now logged in as {this.props.loggedIn.username}</p>
         <textarea id="message" type="textarea" placeholder="Message"/>
         <button id="send">Send</button>
       </div>
@@ -26,7 +27,7 @@ class SocketMessage extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log('This is the state on Reg page',state)
+  // console.log('Hello man',this.props.loggedIn);
   return {
  loggedIn: state.auth.currentUser
   }
