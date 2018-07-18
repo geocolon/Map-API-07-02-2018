@@ -1,5 +1,6 @@
 import React from "react"
 import './MapComponent.css';
+import { connect } from 'react-redux';
 
 class SocketMessage extends React.Component {
     componentDidMount() {
@@ -9,7 +10,7 @@ class SocketMessage extends React.Component {
   render() {
     return (
       <div>
-      <div id="mario-chat">
+      <div className="mario-chat">
         <div id="chat-window">
           <div id="output"></div>
           <div id="feedback"></div>
@@ -24,4 +25,11 @@ class SocketMessage extends React.Component {
   }
 }
 
-export default SocketMessage;
+const mapStateToProps = state => {
+  // console.log('This is the state on Reg page',state)
+  return {
+ loggedIn: state.auth.currentUser
+  }
+};
+
+export default connect(mapStateToProps)(SocketMessage);

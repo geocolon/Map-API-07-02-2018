@@ -17,7 +17,7 @@ class LoginPage extends React.Component {
         return (
             <div>
                 <Nav /> 
-                <h2> Login for App {this.props.loggedIn}</h2>
+                    <center><h2> Login for App {this.props.loggedIn}</h2></center>
                 <Login /><br/>
                 <center><Link to="/signup">Not registered? Sign up</Link></center>
             </div>    

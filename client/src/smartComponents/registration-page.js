@@ -17,9 +17,11 @@ class RegistrationPage extends React.Component {
         return (
             <div className="home">
                 <Nav /> 
-                <h2> Register for App {this.props.loggedIn}</h2>
+                <center><h2> Register for App {this.props.loggedIn}</h2></center>
                 <RegistrationForm />
-                <Link to="/login">Login</Link>
+                <center>
+                    <Link to="/login">Login</Link>
+                </center>
             </div>    
         );
     } 
