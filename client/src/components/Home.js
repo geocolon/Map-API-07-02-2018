@@ -1,6 +1,5 @@
 import React from 'react';
 import Nav from '../smartComponents/Nav';
-import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -11,7 +10,6 @@ const Home = () => {
                 Home
             </h1>
             </div>
-            <Footer />
         </div>
     );
 }

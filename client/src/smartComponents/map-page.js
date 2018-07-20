@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Nav from './Nav';
-import Footer from '../components/Footer';
 import MapComponent from './MapComponent';
 import {Redirect} from 'react-router-dom';
 
@@ -14,7 +13,6 @@ class MapPage extends React.Component {
             <div>
                 <Nav />
                 <MapComponent />
-                <Footer />
             </div>    
         );
     }
