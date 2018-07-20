@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div>
+        <div className="rel">
             <footer>
                 <div className="container">
                     Links 

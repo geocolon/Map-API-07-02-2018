@@ -17,13 +17,13 @@ window.chatEmit = function(){
   btn.addEventListener('click', function(){
     socket.emit('chat', {
       message: message.value,
-      handle: handle.value
+      handle: handle.getAttribute('value')
     });
     message.value = '';
   });
 
   message.addEventListener('keypress', function(){
-    socket.emit('typing', handle.value);
+    socket.emit('typing', handle.getAttribute('value'));
   });
 
   // Listen for events
