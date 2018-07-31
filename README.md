@@ -13,6 +13,6 @@ If you are cloning this repo and wanted to locally host both the client and the 
 * 2nd window writes the word ```mongo``` then hit return. The same result as before should show up as the mongo database starts up. 
 * In the 3rd window write ```node start``` and the server will be available on ```loaclhost/8080``` on your machines web browser. If you have ```nodemon``` of course use it instead.
 
-#Client
+# Client
 
 Next, in terminal cd into the client folder. then write ```npm install``` to add the dependencies. After the dependencies are done downloading write the command ```npm start```. You should see the Frontend in your web browser on ```local/3000``.
