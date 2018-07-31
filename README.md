@@ -20,5 +20,5 @@ Next, in terminal ```cd``` into the client folder, then write ```npm install``` 
 
 # Built With
 
-* [Client] jwt-decode, react, react-redux, redux-form, socket.io-client.
-* [Server] 
+* Client folder // jwt-decode, react, react-redux, redux-form, socket.io-client.
+* Server folder // socket.io, redux, express, jsonwebtoken, bcryptjs, mocha, chai, heroku.
