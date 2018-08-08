@@ -15,7 +15,7 @@ If you are cloning this repo and wanted to locally host both the client and the 
 
 # Client
 
-Next, in terminal ```cd``` into the client folder, then write ```npm install``` to add the dependencies.
+* In terminal ```cd``` into the client folder, then write ```npm install``` to add the dependencies.
 * After the dependencies are done downloading write the command ```npm start```. You should see the Frontend in your web browser on ```local/3000```.
 
 # Built With
