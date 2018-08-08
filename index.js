@@ -4,41 +4,36 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const passport = require('passport');
+
 const usersRouter = require('./routes/users');
 const notesRouter = require('./routes/notes');
 const authRouter = require('./routes/auth');
 const {localStrategy, jwtStrategy } = require('./passport/local');
-const { PORT, CLIENT_ORIGIN } = require('./config');
+
 const { dbConnect } = require('./db-mongoose');
 const socket = require('socket.io');
 
 
 const app = express();
+// Mount routers
+app.use(cors());
 
-app.use( cors({ origin: CLIENT_ORIGIN }) );
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
-// Mount routers
-
-app.use(express.static('public'));
-app.use('/api/', usersRouter); 
-app.use('/api/notes', notesRouter); 
+app.use('/api/', usersRouter);
+app.use('/api/notes', notesRouter);
 app.use('/api/auth/', authRouter);
 
-const jwtAuth = passport.authenticate('jwt', { session: false });
- 
-app.get('/api/protected', jwtAuth, (req, res) => {
-  return res.json({
-    data: 'Chewie'
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-});
-
-
-app.post('/refresh', jwtAuth, (req, res) => {
-  const authToken = authRouter.createAuthToken(req.user);
-  res.json({authToken});
-});
+}
 
 app.use(
   morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
@@ -46,18 +41,9 @@ app.use(
   })
 );
 
+app.use(express.json());
 
-app.use((req, res, next) => { 
-  res.header('Access-Control-Allow-Origin', '*'); 
-  res.header('Access-Control-Allow-Credentials','true'); 
-  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization'); 
-  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
-  if(req.method === 'OPTIONS') { return res.sendStatus(204); } return next(); });
-
-
-app.use(
-  express.json()
-);
+const PORT = process.env.PORT || 8080;
 
 function runServer(port = PORT) {
   const server = app
@@ -69,6 +55,8 @@ function runServer(port = PORT) {
       console.error(err);
     });
 
+
+  // socket.io to server
   const io = socket(server);
   io.on('connection', (socket) => {
 
