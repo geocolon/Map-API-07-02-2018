@@ -1,9 +1,10 @@
 'use strict';
 /* global io */
 // Make connection
+export const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:8080/';
 
-const socket = io.connect('http://localhost:8080');
-// Query DOM
+const socket = io.connect(BASE_URL);
+// Query DOM 'http://localhost:8080'
 window.chatEmit = function(){
   var message = document.getElementById('message'),
     handle = document.getElementById('handle'),

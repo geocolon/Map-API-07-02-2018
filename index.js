@@ -12,6 +12,7 @@ const {localStrategy, jwtStrategy } = require('./passport/local');
 
 const { dbConnect } = require('./db-mongoose');
 const socket = require('socket.io');
+const PORT = process.env.PORT || 8080;
 
 
 const app = express();
@@ -43,7 +44,6 @@ app.use(
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 8080;
 
 function runServer(port = PORT) {
   const server = app
