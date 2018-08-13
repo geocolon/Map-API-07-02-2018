@@ -17,7 +17,7 @@ class Nav extends React.Component {
                 <div className="mobile-nav-space"></div>
                 <nav>
 
-                <Link className="logo" to="/">CompanyLogo</Link>
+                <Link className="logo" to="/">WebSocket</Link>
                 <div className="header-right">
                     <Link className="login-status" to="/">Home</Link>
                     {/* <a href="#about"><Link to="/about">About</Link></a> */}
@@ -46,7 +46,6 @@ class Nav extends React.Component {
 }
 
 const mapStateToProps = state => {
-    // console.log('This is the state on Reg page',state)
     return {
    loggedIn: state.auth.currentUser
     }

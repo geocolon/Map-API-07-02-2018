@@ -1,5 +1,5 @@
 import React from 'react';
-import './MapComponent.css';
+import './ChatComp.css';
 import { connect } from 'react-redux';
 
 class SocketMessage extends React.Component {

@@ -5,11 +5,22 @@ const Home = () => {
     return (
         <div>
             <Nav />
-            <div className="container">
-            <h1>
-                Home
-            </h1>
-            </div>
+            <main className="container">
+                <center>
+                <h1>
+                    WebSocket
+                </h1>
+                </center>
+                <div className="row">
+                    <div className="col-4">
+                        image here...
+                    </div>
+                    <div className="col-6">
+                        <h3>What is WebSocket?</h3>
+                        <p>A web application that uses Socket.io to generate instant messaging capability. It user authentication with PassportJS, MongoDB, and it’s frontend is React and Redux.</p>
+                    </div>
+                </div>
+            </main>
         </div>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import {withRouter, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { refreshAuthToken } from '../actions/auth';
-import MapComponent from './map-page';
+import ChatComp from './map-page';
 import Home from '../components/Home';
 import RegistrationPage from './registration-page';
 import Logout from './Logout';
@@ -45,7 +45,7 @@ export class App extends React.Component {
                 <Route exact path="/signup" component={RegistrationPage} />
                 <Route exact path="/logout" component={Logout} />
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/mapdashboard" component={MapComponent} />
+                <Route exact path="/mapdashboard" component={ChatComp} />
             </div>
         )
     }
