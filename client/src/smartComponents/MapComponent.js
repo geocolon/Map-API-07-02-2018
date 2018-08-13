@@ -3,12 +3,12 @@ import './MapComponent.css';
 import { connect } from 'react-redux';
 
 class SocketMessage extends React.Component {
-    componentDidMount() {
+    
+  componentDidMount() {
       window.chatEmit();
     }
 
   render() {
-    console.log('looking for username',this.props.loggedIn);
     return (
       <div>
       <div className="main-messenger">
@@ -27,7 +27,6 @@ class SocketMessage extends React.Component {
 }
 
 const mapStateToProps = state => {
-  // console.log('Hello man',this.props.loggedIn);
   return {
  loggedIn: state.auth.currentUser
   }

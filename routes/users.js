@@ -21,7 +21,6 @@ router.get('/users', (req, res) => {
 router.post('/users', jsonParser, (req, res) => {
   const requiredFields = ['username', 'password', 'email'];
   const missingField = requiredFields.find(field => !(field in req.body));
-  console.log(req.body);
 
   if (missingField) {
     return res.status(422).json({
@@ -120,7 +119,6 @@ router.post('/users', jsonParser, (req, res) => {
           location: 'username'
         });
       }
-      console.log('Is the data here?');
       // If there is no existing user, hash the password
       return User.hashPassword(password);
     })
@@ -134,7 +132,6 @@ router.post('/users', jsonParser, (req, res) => {
       });
     })
     .then(user => {
-      console.log('The info is passing',req.body);
       return res.status(201).json(user.serialize());
     })
     .catch(err => {

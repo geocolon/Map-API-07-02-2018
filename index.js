@@ -64,7 +64,6 @@ function runServer(port = PORT) {
 
     // Handle chat event
     socket.on('chat', function(data){
-      // console.log(data);
       io.sockets.emit('chat', data);
     });
 
