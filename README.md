@@ -1,8 +1,7 @@
 # WebSocket messenger
 I created this project to understand how to use socket.io, I wanted to create an instant messenger app. I made this app with a React and Redux frontend and programmed a node MongoDB server with passport authentication. 
 
-Please go to the deployed version below.
-<a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a>
+Please go to the deployed version here =>. <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a>
 
 ### Installing
 
