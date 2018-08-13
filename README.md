@@ -16,7 +16,7 @@ If you are cloning this repo and wanted to locally host both the client and the 
 
 ### Client
 
-* In your terminal ```cd``` into the client folder, then write ```npm install``` to add the dependencies.
+* In your 3rd terminal ```cd``` into the client folder, then write ```npm install``` to add the dependencies.
 * In anothr window write ```npm run dev``` and the server will be available on ```loaclhost/8080``` and on your defult web browser ```local/3000``` will show up as well.
 
 ### Built With
