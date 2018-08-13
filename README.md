@@ -1,7 +1,9 @@
 # WebSocket messenger
-I created this project to understand how to use socket.io, I wanted to create an instant messenger app. I made this app with a React and Redux frontend and programmed a node MongoDB server with passport authentication. 
+I created this project to understand how to use socket.io, I wanted to create an instant messenger app. I made this app with a React and Redux frontend and programmed a Node MongoDB server with passport authentication.
 
-Please go to the deployed version here =>. <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a>
+Once you have created a account and use the messenger feature, all messages will be deleted once all parties are sign out.
+
+Please go to the deployed version here. => <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a>
 
 ### Installing
 
@@ -22,4 +24,4 @@ If you are cloning this repo and wanted to locally host both the client and the 
 ### Built With
 
 * Client folder // jwt-decode, react, react-redux, redux-form, socket.io-client.
-* Server folder // socket.io, redux, express, jsonwebtoken, bcryptjs, mocha, chai, heroku.
+* Server folder // socket.io, express, jsonwebtoken, bcryptjs, mocha, chai, heroku.
