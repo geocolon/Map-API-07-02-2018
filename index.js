@@ -47,37 +47,35 @@ app.use(express.json());
 let server;
 
 function runServer(port = PORT) {
-  return new Promise((resolve, reject) => {
-    resolve();
+
+  console.log('Run server!');
+  server = app
+    .listen(port, () => {
+      console.info(`App listening on port ${server.address().port}`);
+    })
+    .on('error', err => {
+      console.error('Express failed to start');
+      console.error(err);
+    });
+
+
+  // socket.io to server
+  const io = socket(server);
+  io.on('connection', (socket) => {
+
+    console.log('made socket connection', socket.id);
+
+    // Handle chat event
+    socket.on('chat', function(data){
+      io.sockets.emit('chat', data);
+    });
+
+    // Handle typing event
+    socket.on('typing', function(data){
+      socket.broadcast.emit('typing', data);
+    });
+
   });
-  // console.log('Run server!');
-  // server = app
-  //   .listen(port, () => {
-  //     console.info(`App listening on port ${server.address().port}`);
-  //   })
-  //   .on('error', err => {
-  //     console.error('Express failed to start');
-  //     console.error(err);
-  //   });
-
-
-  // // socket.io to server
-  // const io = socket(server);
-  // io.on('connection', (socket) => {
-
-  //   console.log('made socket connection', socket.id);
-
-  //   // Handle chat event
-  //   socket.on('chat', function(data){
-  //     io.sockets.emit('chat', data);
-  //   });
-
-  //   // Handle typing event
-  //   socket.on('typing', function(data){
-  //     socket.broadcast.emit('typing', data);
-  //   });
-
-  // });
 }
 
 function closeServer() {
