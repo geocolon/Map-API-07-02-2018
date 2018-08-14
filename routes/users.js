@@ -12,7 +12,7 @@ router.get('/users', (req, res) => {
   return User.find()
     .populate('notes')
     .then((users) => {
-      res.json(users.map(user => user.serialize()));
+      return res.json(users.map(user => user.serialize()));
     })
     .catch(err => res.status(500).json({message: err}));
 });

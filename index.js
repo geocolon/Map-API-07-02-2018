@@ -44,9 +44,11 @@ app.use(
 
 app.use(express.json());
 
+let server;
 
 function runServer(port = PORT) {
-  const server = app
+  console.log('Run server!');
+  server = app
     .listen(port, () => {
       console.info(`App listening on port ${server.address().port}`);
     })
@@ -75,10 +77,25 @@ function runServer(port = PORT) {
   });
 }
 
+function closeServer() {
+  return new Promise((resolve, reject) => {
+    console.log('Closing server');
+    server.close(err => {
+      if (err) {
+        reject(err);
+        // so we don't also call `resolve()`
+        return;
+      }
+      resolve();
+    });
+  });
+}
+
+
 
 if (require.main === module) {
   dbConnect();
   runServer();
 }
 
-module.exports = { app };
+module.exports = { app, runServer, closeServer };

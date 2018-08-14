@@ -15,7 +15,7 @@
     "heroku-postbuild": "NPM_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "mocha": "mocha --exit --file test/setup.test.js '!(node_modules)/**/*test.js'",
     "mocha-exit0": "mocha --exit --file test/setup.test.js '!(node_modules)/**/*test.js' || true",
-    "test": "mocha --exit",
+    "test": "mocha --exit --timeout 3000",
     "cover": "nodemon --exec nyc --reporter=lcov --reporter=text-summary npm run mocha-exit0",
     "travis": "npm run mocha"
   },
@@ -33,6 +33,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
+    "request": "^2.88.0",
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
