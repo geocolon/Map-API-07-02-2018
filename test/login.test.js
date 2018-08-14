@@ -27,9 +27,29 @@ describe('WebSocket API - Login', function () {
   
   describe('WebSocket /api/users', function () {
     
+    // it('should list users on GET', function() {
+    //   return chai.request(app)
+    //     .get('/api/allusers', (req)=> {
+    //       console.log('**** it block is working... ****');
+    //       req.body.json({
+    //         'username':'benpardo',
+    //         'password':'abcdef1234'
+    //       });
+    //     })
+    //     .then(function(res) {
+    //       console.log('Is this hitting?: ',res);
+    //       expect(res).to.have.status(200);
+    //     });
+    // });
 
  
-    it('should list users on GET', function() {
+    it('should have a status 422 on POST USERS', function() {
+      console.log('**** it block is working... ****');
+      return chai.request(app)
+        .post('/api/users/')
+        .then((response) => {
+          expect(response.statusCode).to.eq(422);
+        });
     //   return chai.request(app)
     //     .get('/api/users')
     //     .then(function(res) {
