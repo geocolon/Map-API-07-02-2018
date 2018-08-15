@@ -1,5 +1,5 @@
 # WebSocket messenger
-I created this project to understand how to use socket.io, I wanted to create an instant messenger app. I made this app with a React and Redux frontend and programmed a Node MongoDB server with passport authentication.
+I created this project to understand how to use socket.io, I wanted to create an instant messenger app.
 
 This is an application uses WebSocket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account.
 
