@@ -5,6 +5,14 @@ Once you have created a account and use the messenger feature, all messages will
 
 Please go to the deployed version here. => <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a>
 
+### How to use it.
+
+This is an application which uses WebSocket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account. Please create your own account for full access to try out for yourself. Create an incognito window in your browser to log into the demo account.
+
+Username: mkim
+Password: abcdef1234
+
+
 ### Installing
 
 If you are cloning this repo and wanted to locally host both the client and the server, please open terminal window then ```cd``` to where you cloned this project. 
