@@ -36,4 +36,4 @@ If you are cloning this repo and wanted to locally host both the client and the 
 ### Built With
 
 * Client folder // jwt-decode, react, react-redux, redux-form, socket.io-client.
-* Server folder // socket.io, express, jsonwebtoken, bcryptjs, mocha, chai, heroku.
+* Server // socket.io, express, jsonwebtoken, bcryptjs, mocha, chai, heroku.
