@@ -1,13 +1,15 @@
 # WebSocket messenger
 I created this project to understand how to use socket.io, I wanted to create an instant messenger app. I made this app with a React and Redux frontend and programmed a Node MongoDB server with passport authentication.
 
+This is an application uses WebSocket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account.
+
 Once you have created a account and use the messenger feature, all messages will be deleted once all parties are sign out.
 
 Please go to the deployed version here. => <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a>
 
 ### How to use it.
 
-This is an application which uses WebSocket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account. Please create your own account for full access to try out for yourself. Create an incognito window in your browser to log into the demo account.
+Please create your own account at <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a> for full access to try out for yourself. Create an incognito window in your browser to log into the demo account.
 
 Username: mkim
 Password: abcdef1234
