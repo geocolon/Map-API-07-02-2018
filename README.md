@@ -9,7 +9,7 @@ Please go to the deployed version here. => <a href="https://new-socket-messegner
 
 ### How to use it.
 
-Please create your own account at <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a> for full access to try out for yourself. Create an incognito window in your browser to log into the demo account.
+Please create your own account at <a href="https://new-socket-messegner.herokuapp.com/">WebSocket</a> for full access to try it out for yourself. Create an incognito window in your browser to log into the demo account.
 
 Username: mkim
 Password: abcdef1234
