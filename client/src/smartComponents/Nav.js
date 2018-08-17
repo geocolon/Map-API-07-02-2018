@@ -17,11 +17,11 @@ class Nav extends React.Component {
                 <div className="mobile-nav-space"></div>
                 <nav>
 
-                <Link className="logo" to="/">WebSocket</Link>
+                <Link className="logo" to="/">M&#8226;Socket</Link>
                 <div className="header-right">
                     <Link className="login-status" to="/">Home</Link>
                     {/* <a href="#about"><Link to="/about">About</Link></a> */}
-                    {this.props.loggedIn && <Link to="/mapdashboard">Dashboard</Link> }
+                    {this.props.loggedIn && <Link to="/dashboard">Dashboard</Link> }
                     {!this.props.loggedIn && <Link to="/login">Login</Link> }
                     {!this.props.loggedIn && <Link to="/signup">Sign Up</Link> }
                     <Logout />
@@ -35,7 +35,7 @@ class Nav extends React.Component {
                     {!this.props.loggedIn && <li className="login-status"><Link to="/signup">Sign Up</Link></li> }
                     {!this.props.loggedIn && <li className="login-status"><Link to="/login">Login</Link></li> }
                     <li><Link to="/about">About</Link></li>
-                    {this.props.loggedIn && <li className="login-status"><Link to="/mapdashboard">Map Dashboard</Link></li>}
+                    {this.props.loggedIn && <li className="login-status"><Link to="/dashboard">Map Dashboard</Link></li>}
                     <li><Link to="/">Home</Link></li>
                 </ul> */}
                 

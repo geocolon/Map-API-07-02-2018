@@ -45,7 +45,7 @@ export class App extends React.Component {
                 <Route exact path="/signup" component={RegistrationPage} />
                 <Route exact path="/logout" component={Logout} />
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/mapdashboard" component={ChatComp} />
+                <Route exact path="/dashboard" component={ChatComp} />
             </div>
         )
     }

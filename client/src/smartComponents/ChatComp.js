@@ -16,9 +16,9 @@ class SocketMessage extends React.Component {
           <div id="output"></div>
           <div id="feedback"></div>
         </div>
-        <p id="handle" value={this.props.loggedIn.username}>You are now logged in as {this.props.loggedIn.username}</p>
+        <p id="handle" value={this.props.loggedIn.username}>You are now logged in as {this.props.loggedIn.username}.</p>
         <textarea id="message" type="textarea" placeholder="Message"/>
-        <button id="send">Send</button>
+        <button id="send">Send Message</button>
       </div>
 
       </div>

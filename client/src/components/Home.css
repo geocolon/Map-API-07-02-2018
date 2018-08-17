@@ -1,0 +1,16 @@
+.image-style {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.div-image {
+    padding: 10px;
+}
+
+.cap-text {
+    font-size: 0.7rem;
+    padding:10px auto;
+    margin: 1em auto;
+    text-align: center;
+}

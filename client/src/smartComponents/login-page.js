@@ -9,7 +9,7 @@ class LoginPage extends React.Component {
     // is successful) redirect to the user's dashboard
     render(){
         if (this.props.loggedIn) {
-            return <Redirect to="/mapdashboard" />;
+            return <Redirect to="/dashboard" />;
         }
 
         return (
