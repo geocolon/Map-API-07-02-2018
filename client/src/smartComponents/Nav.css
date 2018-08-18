@@ -16,8 +16,9 @@ a {
 
 /* Button styling */
 .menu-toggle {
-  display: inline-block;
+  display: block;
   padding: .75em 15px;
+  left: 10vw;
   line-height: 1em;
   font-size: 1em;
   color: #333;
@@ -143,11 +144,7 @@ a {
 */
 @media (min-width: 768px) {
 
-  .menu-toggle {
-
-    margin-left:auto;
-  }
-
+ 
   .menu-toggle,
   .main-menu .menu-close {
     display: none;
@@ -201,6 +198,7 @@ a {
 header {
   padding: 20px;
   display: flex;
+  background-color: #aad9f2;
   align-items: baseline;
 }
 
