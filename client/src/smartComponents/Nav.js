@@ -14,32 +14,49 @@ class Nav extends React.Component {
         }
         return( 
             <div className="header">
-                <div className="mobile-nav-space"></div>
-                <nav>
+                <header>
+  
+  <Link className="logo" to="/"><h1 class="logo">M&#8226;Socket</h1></Link>
+  
+  <a href="#main-menu"
+     role="button"
+     id="main-menu-toggle"
+     class="menu-toggle"
+     aria-expanded="false"
+     aria-controls="main-menu"
+     aria-label="Open main menu">
 
-                <Link className="logo" to="/">M&#8226;Socket</Link>
-                <div className="header-right">
-                    <Link className="login-status" to="/">Home</Link>
+    <span class="sr-only">Open main menu</span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </a>
+  <nav id="main-menu" role="navigation" class="main-menu" aria-expanded="false" aria-label="Main menu">
+    <a href="#main-menu-toggle"
+       role="button"
+       id="main-menu-close"
+       class="menu-close"
+       aria-expanded="false"
+       aria-controls="main-menu"
+       aria-label="Close main menu">
+
+      <span class="sr-only">Close main menu</span>
+      <span class="fa fa-close" aria-hidden="true"></span>
+    </a>
+    <ul>
+    <Link to="/"><li>Home</li></Link>
                     {/* <a href="#about"><Link to="/about">About</Link></a> */}
-                    {this.props.loggedIn && <Link to="/dashboard">Dashboard</Link> }
-                    {!this.props.loggedIn && <Link to="/login">Login</Link> }
-                    {!this.props.loggedIn && <Link to="/signup">Sign Up</Link> }
+                    {this.props.loggedIn && <Link to="/dashboard"><li>Dashboard</li></Link> }
+                    {!this.props.loggedIn && <Link to="/login"><li>Login</li></Link> }
+                    {!this.props.loggedIn && <Link to="/signup"><li>Sign Up</li></Link> }
                     <Logout />
-                </div>
 
+    </ul>
+  </nav>
+  <a href="#main-menu-toggle"
+     class="backdrop"
+     tabindex="-1"
+     aria-hidden="true" hidden></a>
+</header>
 
-                {/* <button className="hamburger">
-                </button>
-                <ul className="topnav">
-                    <li><Logout /></li>
-                    {!this.props.loggedIn && <li className="login-status"><Link to="/signup">Sign Up</Link></li> }
-                    {!this.props.loggedIn && <li className="login-status"><Link to="/login">Login</Link></li> }
-                    <li><Link to="/about">About</Link></li>
-                    {this.props.loggedIn && <li className="login-status"><Link to="/dashboard">Map Dashboard</Link></li>}
-                    <li><Link to="/">Home</Link></li>
-                </ul> */}
-                
-                </nav>
             </div>
         );
     }

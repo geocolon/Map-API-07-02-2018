@@ -39,5 +39,7 @@ window.chatEmit = function(){
   });
 };
 
-
+const menuAnimation = function(x) {
+  x.classList.toggle('change');
+};
 
