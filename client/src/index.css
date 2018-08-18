@@ -118,7 +118,7 @@ button{
 
 form {
   font-size:0.9rem;
-  border-radius: 5px;
+  border-radius: 10px;
   max-width: 100%;
   padding: 10px;
   margin-left: auto;
@@ -219,7 +219,7 @@ form {
   }
 
   form {
-    max-width: 60%;
+    max-width: 40%;
   }
   
   

@@ -211,9 +211,10 @@ header h1 {
 header {
   padding: 20px;
   display: flex;
-  background-color: #aad9f2;
+  background-color: #ffffff;
+  border-bottom: 2px solid rgb(210, 208, 208);
   align-content: space-between;
-  align-items: baseline;
+  align-items: baseline;  
 }
 
 article {
