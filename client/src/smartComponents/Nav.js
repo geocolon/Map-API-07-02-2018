@@ -16,30 +16,30 @@ class Nav extends React.Component {
             <div className="header">
                 <header>
   
-  <Link className="logo" to="/"><h1 class="logo">M&#8226;Socket</h1></Link>
+  <Link className="logo" to="/"><h1>M&#8226;Socket</h1></Link>
   
   <a href="#main-menu"
      role="button"
      id="main-menu-toggle"
-     class="menu-toggle"
+     className="menu-toggle"
      aria-expanded="false"
      aria-controls="main-menu"
      aria-label="Open main menu">
 
-    <span class="sr-only">Open main menu</span>
-    <span class="fa fa-bars" aria-hidden="true"></span>
+    <span className="sr-only">Open main menu</span>
+    <span className="fa fa-bars" aria-hidden="true"></span>
   </a>
-  <nav id="main-menu" role="navigation" class="main-menu" aria-expanded="false" aria-label="Main menu">
+  <nav id="main-menu" className="main-menu" aria-expanded="false" aria-label="Main menu">
     <a href="#main-menu-toggle"
        role="button"
        id="main-menu-close"
-       class="menu-close"
+       className="menu-close"
        aria-expanded="false"
        aria-controls="main-menu"
        aria-label="Close main menu">
 
-      <span class="sr-only">Close main menu</span>
-      <span class="fa fa-close" aria-hidden="true"></span>
+      <span className="sr-only">Close main menu</span>
+      <span className="fa fa-close" aria-hidden="true"></span>
     </a>
     <ul>
     <Link to="/"><li>Home</li></Link>
@@ -52,9 +52,9 @@ class Nav extends React.Component {
     </ul>
   </nav>
   <a href="#main-menu-toggle"
-     class="backdrop"
-     tabindex="-1"
-     aria-hidden="true" hidden></a>
+     className="backdrop"
+     tabIndex="-1"
+     aria-hidden="true" hidden>M</a>
 </header>
 
             </div>
