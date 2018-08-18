@@ -21,7 +21,7 @@ class RegistrationForm extends React.Component {
         return (
             <div>
             <div className="container">
-                <form
+               <center><form
                     className="login-form"
                     onSubmit={this.props.handleSubmit(values =>
                         this.onSubmit(values)
@@ -45,7 +45,7 @@ class RegistrationForm extends React.Component {
                         >
                         Register
                     </button>
-                </form>
+                </form></center> 
             </div>
             </div>
         );

@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Nav />
-            <img className="image-style" src="./rawpixel-651370-unsplash.jpg" alt="Woman holding cell phone"/>
+            <img className="image-style image-desktop" src="./rawpixel-651370-unsplash.jpg" alt="Woman holding cell phone"/>
 
             <main className="container">
                 <div className="row border-bottom">
