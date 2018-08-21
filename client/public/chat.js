@@ -4,7 +4,7 @@
 // export const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:8080/';
 //|| 'https://new-socket-messegner.herokuapp.com/' 
 
-const API_BASE_URL = 'https://new-socket-messegner.herokuapp.com/' || 'http://localhost:8080';
+const API_BASE_URL = 'https://new-socket-messegner.herokuapp.com' || 'http://localhost:8080';
 
 const socket = io.connect(API_BASE_URL);
 // Query DOM 'http://localhost:8080/'
