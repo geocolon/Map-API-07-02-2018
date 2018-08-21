@@ -1,12 +1,12 @@
 'use strict';
 /* global io */
 // Make connection
-export const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:8080/';
+// export const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:8080/';
 //|| 'https://new-socket-messegner.herokuapp.com/' 
 
-// import BASE_URL from '../config';
+import API_BASE_URL from '../config';
 
-const socket = io.connect(BASE_URL);
+const socket = io.connect(API_BASE_URL);
 // Query DOM 'http://localhost:8080/'
 window.chatEmit = function(){
   var message = document.getElementById('message'),
