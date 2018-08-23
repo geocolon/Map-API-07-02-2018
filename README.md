@@ -1,4 +1,5 @@
 # M*Socket messenger
+![M socket landing page](https://user-images.githubusercontent.com/7282802/44547683-c1d26680-a6d0-11e8-9592-641fdbfc1fb5.png)
 I created this project to understand how to use socket.io, I wanted to create an instant messenger app.
 
 This is an application uses Web Socket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account.
