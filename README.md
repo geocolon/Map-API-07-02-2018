@@ -9,7 +9,7 @@ Please go to the deployed version here. => <a href="https://m-socket-messenger.h
 
 ### How to use it.
 
-Please create your own account at <a href="https://m-socket-messenger.herokuapp.com/">M*Socket</a> for full access to try it out for yourself. Create an incognito window in your browser to log into the demo account.
+Please create your own account at <a href="https://m-socket-messenger.herokuapp.com/">M*Socket</a> for full access to try it out for yourself. Create a new incognito window, then log into the demo account. Doing this will allow you to see the messages being sent by you to the demo account. Once all accounts are logged out or the account window is closed, all chat messages will be deleted.
 
 Username: mkim
 Password: abcdef1234

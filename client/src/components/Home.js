@@ -19,6 +19,14 @@ const Home = () => {
                         <h3>What is M&#8226;Socket</h3>
                         <p>A simple web application that uses Socket.io to generate instant messaging capability. It user authentication with PassportJS, MongoDB, and it’s frontend is React and Redux.</p>
                         <p>Please sign up and try it yourself!</p>
+                        <p>Please create your own account at <a href="https://m-socket-messenger.herokuapp.com/">M&#8226;Socket</a> for full access to try it out for yourself. Create a new incognito window, then log into the demo account. Doing this will allow you to see the messages being sent by you to the demo account. Once all accounts are logged out or the account window is closed, all chat messages will be deleted.</p>
+
+                        <div className="code-box">
+                        <h4>Demo Account</h4>
+                        <p className="code-text">Username: mkim</p>
+                        <p className="code-text">Password: abcdef1234</p>
+                        </div>
+                        <p><br/></p>
                     </div>
                 </div>   
                 <div className="row">
@@ -33,12 +41,14 @@ const Home = () => {
                         <h4>
                             Take a look at Socket.io's website <a href="https://socket.io/">here</a>.
                         </h4>
+
                     </div>
                     <div className="col-6 padding">
                         <a href="https://socket.io/">
                         <img className="image-style border" src="./SocketIO-desktop.png" alt="socket.io desktop"/>
                         </a>
                     </div>
+                    <p><br/></p>
                 </div>
                 <div className="margin-bottom">
                     <br/>
