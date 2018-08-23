@@ -1,7 +1,7 @@
 # M*Socket messenger
 I created this project to understand how to use socket.io, I wanted to create an instant messenger app.
 
-This is an application uses M*Socket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account.
+This is an application uses Web Socket (Socket.io) technology to create a person to person(s) instant messenger web app. The frontend is powered by React, Redux, Socket.io client. The server is a NodeJS Express server, using MongoDB and Passport for creating an account.
 
 Once you have created a account and use the messenger feature, all messages will be deleted once all parties are sign out.
 
