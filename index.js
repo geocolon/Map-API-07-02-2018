@@ -1,31 +1,35 @@
 'use strict';
 
 const express = require('express');
-const cors = require('cors');
 const morgan = require('morgan');
 const passport = require('passport');
 
 const usersRouter = require('./routes/users');
 const notesRouter = require('./routes/notes');
 const authRouter = require('./routes/auth');
-const {localStrategy, jwtStrategy } = require('./passport/local');
+const { localStrategy, jwtStrategy } = require('./passport/local');
 
 const { dbConnect } = require('./db-mongoose');
 const socket = require('socket.io');
 const PORT = process.env.PORT || 8080;
 
-
 const app = express();
-// Mount routers
-app.use(cors());
+
+app.use(
+  morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
+    skip: (req, res) => process.env.NODE_ENV === 'test',
+  }),
+);
+
+app.use(express.json());
 
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
-app.use('/api/', usersRouter);
+// Mount routers
+app.use('/api', usersRouter);
 app.use('/api/notes', notesRouter);
-app.use('/api/auth/', authRouter);
-
+app.use('/api/auth', authRouter);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
@@ -36,18 +40,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.use(
-  morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
-    skip: (req, res) => process.env.NODE_ENV === 'test'
-  })
-);
-
-app.use(express.json());
-
 let server;
 
 function runServer(port = PORT) {
-
   console.log('Run server!');
   server = app
     .listen(port, () => {
@@ -58,23 +53,20 @@ function runServer(port = PORT) {
       console.error(err);
     });
 
-
   // socket.io to server
   const io = socket(server);
-  io.on('connection', (socket) => {
-
+  io.on('connection', socket => {
     console.log('made socket connection', socket.id);
 
     // Handle chat event
-    socket.on('chat', function(data){
+    socket.on('chat', function(data) {
       io.sockets.emit('chat', data);
     });
 
     // Handle typing event
-    socket.on('typing', function(data){
+    socket.on('typing', function(data) {
       socket.broadcast.emit('typing', data);
     });
-
   });
 }
 
@@ -91,8 +83,6 @@ function closeServer() {
     });
   });
 }
-
-
 
 if (require.main === module) {
   dbConnect();

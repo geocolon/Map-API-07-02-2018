@@ -4,7 +4,7 @@ const { Strategy: LocalStrategy } = require('passport-local');
 const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
 
 const User  = require('../models/user');
-const  {JWT_SECRET}  = require('../config');
+const  keys  = require('../config/keys');
 
 const localStrategy = new LocalStrategy((username, password, callback) => {
   let user;
@@ -41,7 +41,7 @@ const localStrategy = new LocalStrategy((username, password, callback) => {
 
 const jwtStrategy = new JwtStrategy(
   {
-    secretOrKey: JWT_SECRET,
+    secretOrKey: keys.JWT_SECRET,
     // Look for the JWT as a Bearer auth header
     jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('Bearer'),
     // Only allow HS256 tokens - the same as the ones we issue
