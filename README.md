@@ -5,11 +5,11 @@ This is an application uses M*Socket (Socket.io) technology to create a person t
 
 Once you have created a account and use the messenger feature, all messages will be deleted once all parties are sign out.
 
-Please go to the deployed version here. => <a href="https://new-socket-messegner.herokuapp.com/">M*Socket</a>
+Please go to the deployed version here. => <a href="https://m-socket-messenger.herokuapp.com/">M*Socket</a>
 
 ### How to use it.
 
-Please create your own account at <a href="https://new-socket-messegner.herokuapp.com/">M*Socket</a> for full access to try it out for yourself. Create an incognito window in your browser to log into the demo account.
+Please create your own account at <a href="https://m-socket-messenger.herokuapp.com/">M*Socket</a> for full access to try it out for yourself. Create an incognito window in your browser to log into the demo account.
 
 Username: mkim
 Password: abcdef1234
