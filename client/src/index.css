@@ -16,6 +16,11 @@ html, body {
   background-color:lightgray;
 }
 
+.form-error {
+  color: red;
+  font-weight: bold;
+}
+
 
 h2{
   font-size: 18px;

@@ -29,27 +29,8 @@ const Home = () => {
                         <p><br/></p>
                     </div>
                 </div>   
-                <div className="row">
-                    <div className="col-12">
-                        <h3>Socket.io</h3>
-                        <p>Socket.io pushes data to clients that gets represented as real-time counters, charts or logs. From Microsoft Office, Yammer, Zendesk, Trello... to hackathon winners and little startups. One of the most powerful JavaScript frameworks on GitHub, and most depended-upon npm module.
-                        </p>
-                    </div>
-                </div>
-                <div className="row border-bottom">
-                    <div className="col-6">
-                        <h4>
-                            Take a look at Socket.io's website <a href="https://socket.io/">here</a>.
-                        </h4>
-
-                    </div>
-                    <div className="col-6 padding">
-                        <a href="https://socket.io/">
-                        <img className="image-style border" src="./SocketIO-desktop.png" alt="socket.io desktop"/>
-                        </a>
-                    </div>
-                    <p><br/></p>
-                </div>
+                
+                
                 <div className="margin-bottom">
                     <br/>
                 </div>

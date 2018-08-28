@@ -16,7 +16,8 @@ class RegistrationPage extends React.Component {
         return (
             <div className="home">
                 <Nav /> 
-                <center><h2> Register for App {this.props.loggedIn}</h2></center>
+                <center><h2> <br/></h2></center>
+
                 <RegistrationForm />
                 <div className="bottom-mrg">
                 <center>
