@@ -17,12 +17,12 @@ class RegistrationPage extends React.Component {
             <div className="home">
                 <Nav /> 
                 <center><h2> <br/></h2></center>
-
+                <center>
+                    <Link id="login" to="/login">Do you have an account? Log In here.</Link>
+                </center>
                 <RegistrationForm />
                 <div className="bottom-mrg">
-                <center>
-                    <Link to="/login">Login</Link>
-                </center>
+                
                 </div>
             </div>    
         );
