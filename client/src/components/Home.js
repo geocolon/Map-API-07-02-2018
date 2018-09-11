@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../smartComponents/Nav';
 import './Home.css';
-import '../index.css'
+import '../index.css';
 
 
 

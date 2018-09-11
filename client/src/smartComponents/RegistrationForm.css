@@ -5,7 +5,7 @@
 #login {
     padding: 10px;
     background-color:gray;
-    min-width: 40%;
+    min-width: 35%;
     border: solid 1px lightgray;
     border-radius: 10px;
     color:#fff;
@@ -14,7 +14,7 @@
 #signup {
     padding: 10px;
     background-color:gray;
-    min-width: 40%;
+    min-width: 35%;
     border: solid 1px lightgray;
     border-radius: 10px;
     color:#fff;

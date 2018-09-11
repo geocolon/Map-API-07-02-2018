@@ -18,7 +18,7 @@ class RegistrationPage extends React.Component {
                 <Nav /> 
                 <center><h2> <br/></h2></center>
                 <center>
-                    <Link id="login" to="/login">Do you have an account? Log In here.</Link>
+                    <Link id="login" to="/login">Do you have an account? Log in here.</Link>
                 </center>
                 <RegistrationForm />
                 <div className="bottom-mrg">

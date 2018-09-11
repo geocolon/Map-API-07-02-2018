@@ -5,6 +5,11 @@ import {login} from '../actions/auth';
 import Input from './Input';
 import './RegistrationForm.css';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+
+let labelStyle = {
+    padding: '0 0 10px 0'
+}
+
 const passwordLength = length({min: 10, max: 72});
 const matchesPassword = matches('password');
 
@@ -27,6 +32,7 @@ class RegistrationForm extends React.Component {
                         this.onSubmit(values)
                     )}>
                     <label htmlFor="firstname">First name</label>
+                    <div style={labelStyle}></div>
                     <Field component="input" type="text" name="firstname" />
                     <label htmlFor="lastname">Last name</label>
                     <Field component={Input} type="text" name="lastname" />
